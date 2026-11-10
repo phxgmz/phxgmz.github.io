@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Vault</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FBFEF9;
+            color: #202020;
+        }
+
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0E79B2;
+            padding: 18px 10%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #F39237;
+        }
+
+        
+        header {
+            text-align: center;
+            padding: 130px 20px 50px;
+            background-color: #FBFEF9;
+        }
+
+        header h1 {
+            font-size: 42px;
+            color: #0E79B2;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 17px;
+            color: #555;
+        }
+
+        
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 30px 8%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        
+        .game-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+            
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 22px;
+
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 12px;
+        }
+
+        .card-content h2 {
+            color: #0E79B2;
+            font-size: 24px;
+        }
+
+        .card-content p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .game-type {
+            color: #F39237;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .game-button {
+            display: inline-block;
+            background-color: #F39237;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: auto;
+            transition: 0.3s;
+        }
+
+        .game-button:hover {
+            background-color: #0E79B2;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0E79B2;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media screen and (max-width: 700px) {
+
+            nav {
+                padding: 15px 5px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 10px 8px;
+            }
+
+            header {
+                padding: 110px 15px 35px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .game-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 25px;
+            }
+
+            .game-card img {
+                height: 200px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    
+    <header id="home">
+        <h1>GAME VAULT</h1>
+        <p>Discover new worlds. Explore new adventures. Find your next favorite game.</p>
+    </header>
+
+    
+    <main class="game-grid" id="games">
+
+        
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800"
+                 alt="Gaming setup">
+
+            <div class="card-content">
+                <span class="game-type">Adventure</span>
+                <h2>Open World Adventures</h2>
+                <p>
+                    Explore huge worlds, discover hidden locations,
+                    and complete exciting missions.
+                </p>
+                <a href="#about" class="game-button">Explore Game</a>
+            </div>
+        </div>
+
+        
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800"
+                 alt="Gaming esports setup">
+
+            <div class="card-content">
+                <span class="game-type">Competitive</span>
+                <h2>Competitive Gaming</h2>
+                <p>
+                    Challenge other players, improve your skills,
+                    and compete to become the best.
+                </p>
+                <a href="#about" class="game-button">Explore Game</a>
+            </div>
+        </div>
+
+        
+        <div class="game-card" id="favorites">
+            <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800"
+                 alt="Colorful gaming controller">
+
+            <div class="card-content">
+                <span class="game-type">Casual</span>
+                <h2>Casual Games</h2>
+                <p>
+                    Relax, have fun, and enjoy games that are
+                    easy to pick up and play.
+                </p>
+                <a href="#about" class="game-button">Explore Game</a>
+            </div>
+        </div>
+
+        
+        <div class="game-card">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800"
+                 alt="Retro gaming equipment">
+
+            <div class="card-content">
+                <span class="game-type">Retro</span>
+                <h2>Retro Classics</h2>
+                <p>
+                    Revisit classic games and experience
+                    the nostalgia of old-school gaming.
+                </p>
+                <a href="#about" class="game-button">Explore Game</a>
+            </div>
+        </div>
+
+    </main>
+
+    
+    <footer id="about">
+        <h2>About Game Vault</h2>
+        <p>A place to discover and explore different types of games.</p>
+        <p>© 2026 Game Vault</p>
+    </footer>
+
+</body>
+</html>
